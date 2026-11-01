@@ -1,0 +1,51 @@
+# A scene from corpus parts, covering every scene-file feature: one file placed
+# four times, rotation, uniform scale, tint, and mixed units (piston.stp is in
+# inches and lands at its true millimetre size beside metric parts).
+#
+# Lengths in millimetres; rotations in degrees about X, Y, Z in that order.
+
+# The stage: a 256 mm clevis bracket, flat on the ground.
+[[place]]
+file = "ap203/clevis21.stp"
+
+# The turbine disc (246 mm), laid flat on the ground behind it.
+[[place]]
+file = "ap203/turbine.stp"
+at = [128.0, 260.0, 0.0]
+rotate = [0.0, -90.0, 0.0]
+tint = [0.75, 0.78, 0.85, 1.0]
+
+# A piston standing on the clevis: an inch-unit file in a millimetre world.
+[[place]]
+file = "ap203/piston.stp"
+at = [200.0, 60.0, 62.0]
+rotate = [90.0, 0.0, 0.0]
+tint = [0.95, 0.85, 0.4, 1.0]
+
+# One block file, four placements: 4 mm cubes scaled to 16 mm, marching
+# across the bracket with a twist apiece.
+[[place]]
+file = "ap203/block.stp"
+at = [40.0, 30.0, 67.0]
+scale = 4.0
+
+[[place]]
+file = "ap203/block.stp"
+at = [80.0, 30.0, 67.0]
+scale = 4.0
+rotate = [0.0, 0.0, 22.5]
+tint = [1.0, 0.55, 0.25, 1.0]
+
+[[place]]
+file = "ap203/block.stp"
+at = [120.0, 30.0, 67.0]
+scale = 4.0
+rotate = [0.0, 0.0, 45.0]
+tint = [0.35, 0.6, 1.0, 1.0]
+
+[[place]]
+file = "ap203/block.stp"
+at = [160.0, 30.0, 67.0]
+scale = 4.0
+rotate = [45.0, 0.0, 45.0]
+tint = [0.4, 1.0, 0.5, 1.0]

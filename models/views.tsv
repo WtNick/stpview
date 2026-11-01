@@ -1,0 +1,28 @@
+file	name	args
+ap203/nasty_cheese.stp	all	--size 900x700
+ap203/nasty_cheese.stp	bore	--size 700x700 --view 0,0,20,-4.8,4.8,3.2 --ao off --no-ground
+ap203/turbine.stp	all	--size 800x700 --view 20,10
+ap203/bernetl.stp	wires	--size 800x650 --edges all --no-ground
+ap203/rear.stp	all	--size 900x700
+ap203/gear.stp	all	--size 700x700
+ap203/piston.stp	all	--size 700x700
+ap203/bull.stp	all	--size 700x700
+ap203/moon_buggy_asm.stp	all	--size 800x650
+ap203/clevis21.stp	all	--size 700x600
+ap203/block.stp	all	--size 600x500
+ap214/boxy_with_flatness.stp	all	--size 700x600 --view 30,20
+ap214/as1-ac-214.stp	all	--size 800x650
+ap214/io1-ug-214.stp	all	--size 700x600
+ap203/gear.stp	section	--size 700x700 --view 0,89 --section z --edges off
+ap203/piston.stp	section	--size 700x700 --view 25,20 --section x
+ap203/nasty_cheese.stp	section	--size 800x650 --section z
+ap203/bull.stp	silhouette	--size 700x700 --ao off
+ap214/as1-ac-214.stp	rod	--size 800x650 --only ROD-ASSEMBLY
+ap203/socks.stp	section	--size 700x620 --section y --view 30,20
+ap203/block.stp	select	--size 600x450 --select 300,144
+ap203/block.stp	inside	--size 300x240 --section x,0 --view 0,0,-19.5,1.9,0,7.6537 --no-ground
+ap214/as1-ac-214.stp	select	--size 600x450 --select 205,163 --select 432,236
+composite.toml	scene	--size 900x700 --view 30,25
+ap203/4pinplug.stp	thumb	--thumb --size 256x256
+ap203/block.stp	thumb	--thumb --size 256x256
+ap214/as1-ac-214.stp	colors	--size 800x650 --colors assembly

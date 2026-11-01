@@ -1,0 +1,16 @@
+/target
+
+# Third-party models; models/fetch.ps1 downloads the public ones.
+/models/**/*.stp
+/models/**/*.STP
+/models/**/*.step
+/models/**/*.STEP
+
+# Reference frames for models/visual.ps1, rendered from the models above.
+/models/shots/
+
+# Output of `cargo run -p stpview --example contact`.
+/contact/
+
+# Previews written by `cargo run -p stpview-app --example icon`.
+/crates/app/icons/*.png

@@ -1,0 +1,34 @@
+[package]
+name = "stpview-app"
+description = "The stpview CLI and interactive viewer, built on the stpview library"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+# The scripts in models/ invoke target/release/stpview.exe.
+[[bin]]
+name = "stpview"
+path = "src/main.rs"
+
+[dependencies]
+stpview = { path = "../render" }
+png = "0.18.1"
+pollster = "1.0.1"
+winit = "0.30.13"
+
+# The SpaceMouse is read over raw HID, without the 3Dconnexion SDK. The
+# pure-Rust Windows backend needs no C compiler.
+[target.'cfg(windows)'.dependencies]
+hidapi = { version = "2.6", default-features = false, features = ["windows-native"] }
+# For --register: the CLSID and ShellEx keys come from the DLL's own constants.
+stpview-shell = { path = "../shell" }
+windows.workspace = true
+
+[target.'cfg(not(windows))'.dependencies]
+hidapi = "2.6"
+
+# Embeds the icons and a version block into stpview.exe (needs rc.exe from the
+# Windows SDK; the build warns and continues without it).
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1.31"

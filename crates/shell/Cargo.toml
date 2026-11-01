@@ -1,0 +1,18 @@
+[package]
+name = "stpview-shell"
+description = "Windows shell thumbnail provider for STEP files, built on the stpview library"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+# An in-process COM server loaded by Explorer's thumbnail surrogate. The `lib`
+# crate type lets `cargo test` exercise it too.
+[lib]
+name = "stpview_shell"
+crate-type = ["cdylib", "lib"]
+
+[target.'cfg(windows)'.dependencies]
+stpview = { path = "../render" }
+windows.workspace = true
+windows-core.workspace = true
