@@ -10,6 +10,16 @@ The [BDX-R](https://github.com/BDX-R/BDX-R-CAD) open-source biped (MIT), whole
 and with `--section x`: a 92 MB STEP file of 1.17M entities, 119 solids and
 20,256 faces, read and tessellated into 1.06M triangles in under two seconds.
 
+![The cut-open drives, without and with ambient occlusion](docs/ao.png)
+
+Screen-space ambient occlusion, off and on (`--ao off`, `--ao heavy`): without
+it the gear pockets read as flat discs, with it they have depth.
+
+![Parts coloured by assembly, and a section from the side](docs/parts.png)
+
+Parts coloured by their assembly (`--colors assembly`, or `C` in the viewer),
+and a capped section through the neck and leg drives (`--section y`).
+
 | Crate | Role |
 | --- | --- |
 | `stpview-core` | Parser, B-rep model, geometry, tessellation, STL reader, `Assets` cache, `Scene`. No GPU. |
